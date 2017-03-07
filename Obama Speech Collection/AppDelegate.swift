@@ -11,6 +11,8 @@
 
 import UIKit
 import TVMLKit
+import Fabric
+import Answers
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDelegate {
@@ -25,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        Fabric.with([Answers.self])
+
         window = UIWindow(frame: UIScreen.main.bounds)
         
         // 1

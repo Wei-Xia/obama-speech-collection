@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD7B5DEB1E6768DC000416C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B5DEA1E6768DC000416C9 /* AppDelegate.swift */; };
 		BD7B5DEF1E6768DC000416C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7B5DEE1E6768DC000416C9 /* Assets.xcassets */; };
+		BD7BA58D1E6F63B700A6B496 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7BA58B1E6F63B700A6B496 /* Fabric.framework */; };
+		BD7BA58E1E6F63B700A6B496 /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7BA58C1E6F63B700A6B496 /* Answers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		BD7B5DED1E6768DC000416C9 /* application.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
 		BD7B5DEE1E6768DC000416C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD7B5DF01E6768DC000416C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7BA58B1E6F63B700A6B496 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		BD7BA58C1E6F63B700A6B496 /* Answers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Answers.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7BA58E1E6F63B700A6B496 /* Answers.framework in Frameworks */,
+				BD7BA58D1E6F63B700A6B496 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +39,8 @@
 		BD7B5DDE1E6768DC000416C9 = {
 			isa = PBXGroup;
 			children = (
+				BD7BA58B1E6F63B700A6B496 /* Fabric.framework */,
+				BD7BA58C1E6F63B700A6B496 /* Answers.framework */,
 				BD7B5DE91E6768DC000416C9 /* Obama Speech Collection */,
 				BD7B5DE81E6768DC000416C9 /* Products */,
 			);
@@ -75,6 +83,7 @@
 				BD7B5DE31E6768DC000416C9 /* Sources */,
 				BD7B5DE41E6768DC000416C9 /* Frameworks */,
 				BD7B5DE51E6768DC000416C9 /* Resources */,
+				BD7BA58A1E6F636400A6B496 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -129,6 +138,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD7BA58A1E6F636400A6B496 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d0d99854685e85d3878fcf8e03acb34b652bad8f 26bf51acee0f3b26b08a86a6932b3a911494451d746dd10ab21c73233622466e";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD7B5DE31E6768DC000416C9 /* Sources */ = {
@@ -245,6 +270,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Wei Xia (JKVUBMY3K2)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JKVUBMY3K2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Obama Speech Collection/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "obama-speech-collection";
@@ -261,6 +290,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Wei Xia (JKVUBMY3K2)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JKVUBMY3K2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Obama Speech Collection/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "obama-speech-collection";
