@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     
     var appController: TVApplicationController?
-//    static let TVBaseURL = "http://localhost:9001/"
-    static let TVBaseURL = "http://54.164.30.242:8080/"
+    static let TVBaseURL = "http://localhost:9001/"
+//    static let TVBaseURL = "http://54.164.30.242:8080/"
     static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
