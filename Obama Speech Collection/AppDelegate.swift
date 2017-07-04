@@ -11,6 +11,9 @@
 
 import UIKit
 import TVMLKit
+import Fabric
+import Crashlytics
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDelegate {
@@ -20,12 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     
     var appController: TVApplicationController?
-    static let TVBaseURL = "http://localhost:9001/"
-//    static let TVBaseURL = "http://54.164.30.242:8080/"
+//    static let TVBaseURL = "http://localhost:9001/"
+    static let TVBaseURL = "http://54.164.30.242:8080/"
     static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        Fabric.with([Crashlytics.self])
         
         // 1
         let appControllerContext = TVApplicationControllerContext()
